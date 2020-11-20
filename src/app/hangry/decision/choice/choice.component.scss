@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+  flex: 1 1 auto !important;
+  min-height: 36px;
+}
+
+button {
+  width: 100%;
+  flex: 1 1 auto !important;
+  min-height: 36px;
+}
+
+.active {
+  background-color: var(--color-success) !important;
+}

@@ -1,0 +1,14 @@
+<mat-card fxLayout="column" fxLayoutGap="16px">
+  <h3>{{decision.header | uppercase}}</h3>
+  <ng-container *ngIf="decision.choices?.length > 0">
+    <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+      <app-choice *ngFor="let choice of decision.choices" [choice]="choice" (selected)="perform($event)"></app-choice>
+    </div>
+  </ng-container>
+</mat-card>
+<ng-container *ngIf="next">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <mat-icon svgIcon="chevron-down"></mat-icon>
+  </div>
+  <app-decision [decision]="next"></app-decision>
+</ng-container>

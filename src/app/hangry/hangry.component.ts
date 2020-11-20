@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Decision } from './models';
+import { DecisionTreeService } from './services';
 
 @Component({
   selector: 'app-hangry',
@@ -15,9 +18,14 @@ export class HangryComponent implements OnInit {
 
   decision: string;
 
-  constructor() { }
+  tree$: Observable<Decision>;
+
+  constructor(
+    private decisionTree: DecisionTreeService
+  ) { }
 
   ngOnInit(): void {
+    this.tree$ = this.decisionTree.tree$;
   }
 
   click(key: string, value: any) {

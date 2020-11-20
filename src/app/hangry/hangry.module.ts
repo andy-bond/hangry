@@ -11,10 +11,14 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { HangryRoutingModule } from './hangry.routing';
 import { HangryComponent } from './hangry.component';
+import { DecisionComponent } from './decision/decision.component';
+import { ChoiceComponent } from './decision/choice/choice.component';
 
 @NgModule({
   declarations: [
-    HangryComponent
+    HangryComponent,
+    DecisionComponent,
+    ChoiceComponent
   ],
   imports: [
     CommonModule,
