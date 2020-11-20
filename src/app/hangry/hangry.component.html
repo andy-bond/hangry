@@ -4,10 +4,10 @@
   <mat-card fxLayout="column" fxLayoutGap="16px">
     <h3>ARE WE EATING IN OR OUT?</h3>
     <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
-      <button fxFlex mat-raised-button color="primary" [class.active]="location === 'in'" (click)="click('location', 'in')">
+      <button fxFlex="grow" mat-raised-button color="primary" [class.active]="location === 'in'" (click)="click('location', 'in')">
         LET'S EAT IN
       </button>
-      <button fxFlex mat-raised-button color="primary" [class.active]="location === 'out'" (click)="click('location', 'out')">
+      <button fxFlex="grow" mat-raised-button color="primary" [class.active]="location === 'out'" (click)="click('location', 'out')">
         LET'S EAT OUT
       </button>
     </div>
@@ -18,76 +18,77 @@
       <mat-icon svgIcon="chevron-down"></mat-icon>
     </div>
 
-    <mat-card *ngIf="location === 'out'" fxLayout="column" fxLayoutGap="16px">
-      <h3>DO WE HAVE MONEY?</h3>
-      <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
-        <button fxFlex mat-raised-button color="primary" [class.active]="money === false" (click)="click('money', false)">
-          NO
-        </button>
-        <button fxFlex mat-raised-button color="primary" [class.active]="money === true" (click)="click('money', true)">
-          YES
-        </button>
-      </div>
-    </mat-card>
-
-    <ng-container *ngIf="money === true">
-      <div fxLayout="column" fxLayoutAlign="center center">
-        <mat-icon svgIcon="chevron-down"></mat-icon>
-      </div>
-
-      <mat-card fxLayout="column" fxLayoutGap="16px">
-        <h3>FEEL LIKE A CERTAIN TYPE OF FOOD?</h3>
+    <ng-container *ngIf="location === 'out'">
+      <mat-card *ngIf="location === 'out'" fxLayout="column" fxLayoutGap="16px">
+        <h3>DO WE HAVE MONEY?</h3>
         <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
-          <button fxFlex mat-raised-button color="primary" [class.active]="pick === false" (click)="click('pick', false)">
+          <button fxFlex="grow" mat-raised-button color="primary" [class.active]="money === false" (click)="click('money', false)">
             NO
           </button>
-          <button fxFlex mat-raised-button color="primary" [class.active]="pick === true" (click)="click('pick', true)">
+          <button fxFlex="grow" mat-raised-button color="primary" [class.active]="money === true" (click)="click('money', true)">
             YES
           </button>
         </div>
       </mat-card>
-    </ng-container>
 
-    <ng-container *ngIf="pick === true">
-      <div fxLayout="column" fxLayoutAlign="center center">
-        <mat-icon svgIcon="chevron-down"></mat-icon>
-      </div>
-
-      <mat-card fxLayout="column" fxLayoutGap="16px">
-        <h3>WHAT TYPE OF FOOD?</h3>
-        <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
-          <button fxFlex mat-raised-button color="primary" [class.active]="type === 'pizza'" (click)="click('type', 'pizza')">
-            PIZZA
-          </button>
-          <button fxFlex mat-raised-button color="primary" [class.active]="type === 'burgers'" (click)="click('type', 'burgers')">
-            BURGERS
-          </button>
-          <button fxFlex mat-raised-button color="primary" [class.active]="type === 'pasta'" (click)="click('type', 'pasta')">
-            PASTA
-          </button>
-          <button fxFlex mat-raised-button color="primary" [class.active]="type === 'chicken'" (click)="click('type', 'chicken')">
-            CHICKEN
-          </button>
-          <button fxFlex mat-raised-button color="primary" [class.active]="type === 'other'" (click)="click('type', 'other')">
-            OTHER
-          </button>
+      <ng-container *ngIf="money === true">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-icon svgIcon="chevron-down"></mat-icon>
         </div>
-      </mat-card>
+
+        <mat-card fxLayout="column" fxLayoutGap="16px">
+          <h3>FEEL LIKE A CERTAIN TYPE OF FOOD?</h3>
+          <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+            <button fxFlex="grow" mat-raised-button color="primary" [class.active]="pick === false" (click)="click('pick', false)">
+              NO
+            </button>
+            <button fxFlex="grow" mat-raised-button color="primary" [class.active]="pick === true" (click)="click('pick', true)">
+              YES
+            </button>
+          </div>
+        </mat-card>
+        <ng-container *ngIf="pick === true">
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <mat-icon svgIcon="chevron-down"></mat-icon>
+          </div>
+
+          <mat-card fxLayout="column" fxLayoutGap="16px">
+            <h3>WHAT TYPE OF FOOD?</h3>
+            <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+              <button fxFlex="grow" mat-raised-button color="primary" [class.active]="type === 'pizza'" (click)="click('type', 'pizza')">
+                PIZZA
+              </button>
+              <button fxFlex="grow" mat-raised-button color="primary" [class.active]="type === 'burgers'" (click)="click('type', 'burgers')">
+                BURGERS
+              </button>
+              <button fxFlex="grow" mat-raised-button color="primary" [class.active]="type === 'pasta'" (click)="click('type', 'pasta')">
+                PASTA
+              </button>
+              <button fxFlex="grow" mat-raised-button color="primary" [class.active]="type === 'chicken'" (click)="click('type', 'chicken')">
+                CHICKEN
+              </button>
+              <button fxFlex="grow" mat-raised-button color="primary" [class.active]="type === 'other'" (click)="click('type', 'other')">
+                OTHER
+              </button>
+            </div>
+          </mat-card>
+        </ng-container>
+      </ng-container>
     </ng-container>
 
     <mat-card *ngIf="location === 'in'" fxLayout="column" fxLayoutGap="16px">
       <h3>WHAT IS ABOUT TO EXPIRE?</h3>
       <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
-        <button fxFlex mat-raised-button color="primary" [class.active]="expire === 'beef'" (click)="click('expire', 'beef')">
+        <button fxFlex="grow" mat-raised-button color="primary" [class.active]="expire === 'beef'" (click)="click('expire', 'beef')">
           BEEF
         </button>
-        <button fxFlex mat-raised-button color="primary" [class.active]="expire === 'chicken'" (click)="click('expire', 'chicken')">
+        <button fxFlex="grow" mat-raised-button color="primary" [class.active]="expire === 'chicken'" (click)="click('expire', 'chicken')">
           CHICKEN
         </button>
-        <button fxFlex mat-raised-button color="primary" [class.active]="expire === 'pork'" (click)="click('expire', 'pork')">
+        <button fxFlex="grow" mat-raised-button color="primary" [class.active]="expire === 'pork'" (click)="click('expire', 'pork')">
           PORK
         </button>
-        <button fxFlex mat-raised-button color="primary" [class.active]="expire === 'nothing'" (click)="click('expire', 'nothing')">
+        <button fxFlex="grow" mat-raised-button color="primary" [class.active]="expire === 'nothing'" (click)="click('expire', 'nothing')">
           NOTHING
         </button>
       </div>
