@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { fade } from '@core/helpers';
-import { Action, Decision } from '../models';
+import { Action, Choice, Decision } from '../models';
 
 @Component({
   selector: 'app-decision',
@@ -17,8 +17,17 @@ export class DecisionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  perform(action: Action) {
+  perform(choice: Choice, action: Action) {
     this.next = undefined;
+    if (this.decision.choices?.length > 0) {
+      this.decision.choices.forEach(c => {
+        if (c !== choice) {
+          c.selected = false;
+        } else {
+          c.selected = true;
+        }
+      });
+    }
     if (action.type === 'decision') {
       this.next = action.value as Decision;
     }

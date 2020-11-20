@@ -2,7 +2,7 @@
   <h3>{{decision.header | uppercase}}</h3>
   <ng-container *ngIf="decision.choices?.length > 0">
     <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
-      <app-choice *ngFor="let choice of decision.choices" [choice]="choice" (selected)="perform($event)"></app-choice>
+      <app-choice *ngFor="let choice of decision.choices" [choice]="choice" (selected)="perform(choice, $event)"></app-choice>
     </div>
   </ng-container>
 </mat-card>
