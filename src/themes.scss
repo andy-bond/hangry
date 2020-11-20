@@ -1,0 +1,70 @@
+/* Angular Material */
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* --------------------------------------- COLOR SETUP --------------------------------------- */
+
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$success: mat-palette($mat-green);
+
+$light-theme: mat-light-theme($primary, $accent, $warn);
+$light-foreground: map-get($light-theme, foreground);
+$light-background: map-get($light-theme, background);
+
+$dark-theme: mat-dark-theme($primary, $accent, $warn);
+$dark-foreground: map-get($dark-theme, foreground);
+$dark-background: map-get($dark-theme, background);
+
+/* --------------------------------------- THEME SETUP --------------------------------------- */
+
+// GLOBAL CSS VARIABLES
+:root {
+  // Typography
+  --font-sans-serif: "Roboto", "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-serif: "Roboto Slab", "Georgia", serif;
+  --font-monospace: "Roboto Mono", "Consolas", monospace;
+
+  // Common Colors
+  --color-primary: #{mat-color($primary, default)};
+  --color-primary-dark: #{mat-color($primary, darker)};
+  --color-primary-light: #{mat-color($primary, lighter)};
+  --color-accent: #{mat-color($accent, default)};
+  --color-accent-dark: #{mat-color($accent, 700)};
+  --color-accent-light: #{mat-color($accent, 500)};
+  --color-warning: #{mat-color($warn, 700)};
+  --color-success: #{mat-color($success, 700)};
+  --color-scrollbar-thumb: #{var(--color-accent)};
+  --color-scrollbar-background: #{var(--color-divider)};
+  --color-text-light-background: rgba(0, 0, 0, 0.85);
+  --color-text-dark-background: rgba(255, 255, 255, 0.85);
+  --color-transparent-dark: rgba(0, 0, 0, 0.12);
+  --color-transparent-light: rgba(255, 255, 255, 0.12);
+}
+
+/* --------------------------------------- DYNAMIC DARK MODE --------------------------------------- */
+
+.theme-light {
+  @include angular-material-theme($light-theme);
+  --color-text: #{mat-color($light-foreground, text)};
+  --color-text-secondary: #{mat-color($light-foreground, secondary-text)};
+  --color-background: #{mat-color($light-background, background)};
+  --color-divider: #{mat-color($light-foreground, divider)};
+  --color-card: #{mat-color($light-background, card)};
+  --color-status-bar: #{mat-color($light-background, status-bar)};
+  --color-translucent: rgba(255, 255, 255, 0.5);
+  --color-toolbar: #{mat-color($light-background, app-bar)};
+}
+
+.theme-dark {
+  @include angular-material-theme($dark-theme);
+  --color-text: #{mat-color($dark-foreground, text)};
+  --color-text-secondary: #{mat-color($dark-foreground, secondary-text)};
+  --color-background: #{mat-color($dark-background, background)};
+  --color-divider: #{mat-color($dark-foreground, divider)};
+  --color-card: #{mat-color($dark-background, card)};
+  --color-status-bar: #{mat-color($dark-background, status-bar)};
+  --color-translucent: rgba(75, 75, 75, 0.5);
+  --color-toolbar: #{mat-color($dark-background, app-bar)};
+}

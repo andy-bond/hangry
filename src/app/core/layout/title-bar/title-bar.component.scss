@@ -1,0 +1,38 @@
+mat-toolbar {
+  max-height: 48px;
+  background-color: var(--color-primary-dark) !important;
+  color: var(--color-text-dark-background) !important;
+  padding: 0;
+
+  mat-icon {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 20px;
+  }
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+
+  .title {
+    font-size: 20px;
+    color: var(--color-text-dark-background);
+    text-decoration: none;
+    font-family: var(--font-serif);
+    align-self: flex-start;
+  }
+
+  .title-text {
+    margin-left: 4px;
+  }
+}
+
+.square-btn {
+  height: 48px;
+  width: 48px;
+  border-radius: 0;
+  background-color: var(--color-transparent-dark);
+}

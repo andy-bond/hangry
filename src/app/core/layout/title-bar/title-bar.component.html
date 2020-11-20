@@ -1,0 +1,13 @@
+<mat-toolbar class="mat-elevation-z6">
+  <div fxFlex class="title-container">
+    <a class="title flex-center" routerLink="/">
+      <mat-icon svgIcon="silverware-fork-knife"></mat-icon>
+      <div class="title-text">
+        {{appTitle | uppercase}}
+      </div>
+    </a>
+  </div>
+  <button class="square-btn" mat-icon-button (click)="click('theme')">
+    <mat-icon [svgIcon]="(dark$ | async) ? 'weather-night' : 'weather-sunny'"></mat-icon>
+  </button>
+</mat-toolbar>

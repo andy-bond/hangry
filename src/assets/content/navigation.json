@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Dashboard",
+    "icon": "view-dashboard",
+    "link": "/Dashboard"
+  },
+  {
+    "name": "RouteOne",
+    "icon": "numeric-1-box",
+    "link": "/RouteOne"
+  },
+  {
+    "name": "RouteTwo",
+    "icon": "numeric-2-box",
+    "link": "/RouteTwo",
+    "items": [
+      {
+        "name": "All",
+        "icon": "numeric-2-box",
+        "link": "/Interactions"
+      },
+      {
+        "name": "Flagged",
+        "icon": "flag",
+        "link": "/RouteTwo",
+        "queryParams": {
+          "flagged": true
+        }
+      },
+      {
+        "name": "Assigned",
+        "icon": "briefcase-plus",
+        "link": "/RouteTwo",
+        "queryParams": {
+          "assigned": true
+        }
+      },
+      {
+        "name": "Resolved",
+        "icon": "check",
+        "link": "/RouteTwo",
+        "queryParams": {
+          "resolved": true
+        }
+      }
+    ]
+  }
+]

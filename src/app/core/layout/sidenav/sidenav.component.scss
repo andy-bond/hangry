@@ -1,0 +1,32 @@
+button {
+  font-size: 16px;
+  min-height: 50px;
+  text-align: left;
+  align-items: center;
+  border-radius: 0;
+}
+
+.active-button {
+  background-color: rgba(153, 153, 153, 0.25) !important;
+}
+
+.active-nav-section {
+  box-shadow: inset 4px 0 0 #707070;
+}
+
+.active-nav-section > button {
+  background-color: rgba(153, 153, 153, 0.1);
+}
+
+.sidenav-button-icon {
+  margin-right: 8px;
+  color: rgb(153, 153, 153);
+}
+
+.nav-section > button + button {
+  padding-left: 2em;
+}
+
+.nav-section:not(.active-nav-section) > button + button {
+  display: none;
+}

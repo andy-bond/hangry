@@ -1,0 +1,100 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  // Default Formatters
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // Exclude third party modules and build artifacts from the editor watchers/searches.
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/package-lock.json": true
+  },
+  // Use if you have Cascadia Code font installed
+  "editor.fontFamily": "'Cascadia Code', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  // Extension Settings (optional)
+  // Extension: Material Icon Theme
+  "material-icon-theme.activeIconPack": "angular",
+  "material-icon-theme.files.associations": {
+    "*.config.ts": "settings",
+    "index.ts": "readme"
+  },
+  // Extension: TODO Tree
+  "todo-tree.tree.showScanModeButton": false,
+  "todo-tree.general.tags": [
+    "TODO",
+    "TASK",
+    "INFO",
+    "NOTE",
+    "SOURCE",
+    "REVIEW",
+    "REVISIT"
+  ],
+  "todo-tree.general.tagGroups": {
+    "INFO": [
+      "INFO",
+      "NOTE",
+      "SOURCE"
+    ],
+    "TASK": [
+      "TASK",
+      "TODO"
+    ],
+    "REVIEW": [
+      "REVIEW",
+      "REVISIT"
+    ]
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "gutterIcon": true,
+    "type": "text-and-comment",
+    "foreground": "#FF9800",
+    "iconColour": "#FF9800",
+    "fontStyle": "italic"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TASK": {
+      "icon": "alert",
+      "foreground": "#FF9800",
+      "iconColour": "#FF9800"
+    },
+    "REVIEW": {
+      "icon": "eye",
+      "foreground": "#0097A7",
+      "background": "#757575",
+      "opacity": 35,
+      "iconColour": "#2196F3"
+    },
+    "INFO": {
+      "icon": "info",
+      "foreground": "#757575",
+      "background": "#757575",
+      "opacity": 15,
+      "iconColour": "#9E9E9E",
+      "hideFromTree": true
+    }
+  },
+  "todo-tree.tree.labelFormat": "${tag}: ${after}",
+  "todo-tree.filtering.useBuiltInExcludes": "file and search excludes",
+  "todo-tree.tree.tagsOnly": true
+}
