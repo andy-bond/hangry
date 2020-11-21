@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Alfredo",
+    "categories": [
+      "chicken"
+    ]
+  },
+  {
+    "name": "Parm",
+    "categories": [
+      "chicken"
+    ]
+  },
+  {
+    "name": "Tacos",
+    "categories": [
+      "chicken",
+      "beef"
+    ]
+  },
+  {
+    "name": "Fried",
+    "categories": [
+      "chicken",
+      "pork"
+    ]
+  },
+  {
+    "name": "Teriyaki",
+    "categories": [
+      "chicken"
+    ]
+  },
+  {
+    "name": "Burger",
+    "categories": [
+      "beef"
+    ]
+  },
+  {
+    "name": "Spaghetti",
+    "categories": [
+      "beef"
+    ]
+  },
+  {
+    "name": "Tortellini",
+    "categories": [
+      "beef"
+    ]
+  },
+  {
+    "name": "Bake",
+    "categories": [
+      "pork"
+    ]
+  },
+  {
+    "name": "Pulled",
+    "categories": [
+      "pork"
+    ]
+  },
+  {
+    "name": "Potroast",
+    "categories": [
+      "pork"
+    ]
+  }
+]

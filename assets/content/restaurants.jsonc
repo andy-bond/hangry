@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Goodfellas",
+    "categories": [
+      "pizza"
+    ]
+  },
+  {
+    "name": "Apollo",
+    "categories": [
+      "pizza"
+    ]
+  },
+  {
+    "name": "Cheesecake Factory",
+    "categories": [
+      "burger",
+      "chicken",
+      "pasta"
+    ]
+  },
+  {
+    "name": "Burger-Fi",
+    "categories": [
+      "burger"
+    ]
+  },
+  {
+    "name": "Mr. Brews",
+    "categories": [
+      "burger"
+    ]
+  },
+  {
+    "name": "Pasta Garage",
+    "categories": [
+      "pasta"
+    ]
+  },
+  {
+    "name": "Olive Garden",
+    "categories": [
+      "pasta",
+      "chicken"
+    ]
+  },
+  {
+    "name": "Ramseys",
+    "categories": [
+      "chicken"
+    ]
+  },
+  {
+    "name": "Allison Gets Chinese - Daniel Get's Something Else",
+    "categories": [
+      "other"
+    ]
+  }
+]
