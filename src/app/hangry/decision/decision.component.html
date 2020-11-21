@@ -1,14 +1,16 @@
+<div *ngIf="index !== 0" class="chevron" fxLayout="column" fxLayoutAlign="center center" [@fade]>
+  <mat-icon svgIcon="chevron-down"></mat-icon>
+</div>
 <mat-card class="mat-elevation-z4" fxLayout="column" fxLayoutGap="16px" [@fade]>
-  <h3>{{decision.header | uppercase}}</h3>
-  <ng-container *ngIf="decision.choices?.length > 0">
-    <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
-      <app-choice *ngFor="let choice of decision.choices" [choice]="choice" (selected)="perform(choice, $event)"></app-choice>
-    </div>
+  <ng-container *ngIf="!broke;else yaBroke">
+    <h3>{{decision.header | uppercase}}</h3>
+    <ng-container *ngIf="decision.options?.length > 0">
+      <div class="flex-center" fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="16px">
+        <app-option *ngFor="let option of decision.options" [option]="option" [active]="selected === option" (selected)="select(option)"></app-option>
+      </div>
+    </ng-container>
   </ng-container>
 </mat-card>
-<ng-container *ngIf="next">
-  <div class="chevron" fxLayout="column" fxLayoutAlign="center center" [@fade]>
-    <mat-icon svgIcon="chevron-down"></mat-icon>
-  </div>
-  <app-decision [decision]="next"></app-decision>
-</ng-container>
+<ng-template #yaBroke>
+  <h3>WE'RE BROKE... LET'S EAT IN</h3>
+</ng-template>

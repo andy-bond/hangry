@@ -1,5 +1,21 @@
-<div class="hangry-container" fxLayout="column" fxLayoutGap="32px">
+<div class="hangry-container" fxLayout="column">
   <h1>WHAT SHOULD WE EAT?</h1>
-  <app-decision [decision]="decision$ | async"></app-decision>
+  <ng-container *ngIf="decisions$ | async as decisions">
+    <ng-container *ngFor="let decision of decisions;let index = index;">
+      <app-decision [decision]="decision" [index]="index" (special)="perform($event)"></app-decision>
+    </ng-container>
+  </ng-container>
+  <div *ngIf="meals || restaurants" class="chevron" fxLayout="column" fxLayoutAlign="center center" [@fade]>
+    <mat-icon svgIcon="chevron-down"></mat-icon>
+  </div>
+  <ng-container *ngIf="meals$ | async as ms">
+    <mat-card *ngIf="meals" [@fade]>
+      <div *ngFor="let m of ms">{{m.name}}</div>
+    </mat-card>
+  </ng-container>
+  <ng-container *ngIf="restaurants$ | async as rs">
+    <mat-card *ngIf="restaurants" [@fade]>
+      <div *ngFor="let r of rs">{{r.name}}</div>
+    </mat-card>
+  </ng-container>
 </div>
-

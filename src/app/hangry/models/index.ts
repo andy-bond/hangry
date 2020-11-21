@@ -1,3 +1,5 @@
 export { Action } from './action';
-export { Choice } from './choice';
 export { Decision } from './decision';
+export { Option } from './option';
+export { Meal } from './meal';
+export { Restaurant } from './restaurant';

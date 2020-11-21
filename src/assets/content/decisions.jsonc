@@ -1,0 +1,144 @@
+[
+  {
+    "id": "location",
+    "header": "Are we eating in or out?",
+    "options": [
+      {
+        "text": "Let's Eat In",
+        "icon": "home",
+        "action": {
+          "type": "decision",
+          "value": "meat"
+        }
+      },
+      {
+        "text": "Let's Eat Out",
+        "icon": "car",
+        "action": {
+          "type": "decision",
+          "value": "money"
+        }
+      }
+    ]
+  },
+  {
+    "id": "meat",
+    "header": "Pick a Meat",
+    "options": [
+      {
+        "text": "Beef",
+        "icon": "cow",
+        "action": {
+          "type": "meal-options",
+          "value": "beef"
+        }
+      },
+      {
+        "text": "Chicken",
+        "icon": "food-drumstick-outline",
+        "action": {
+          "type": "meal-options",
+          "value": "chicken"
+        }
+      },
+      {
+        "text": "Pork",
+        "icon": "pig-variant-outline",
+        "action": {
+          "type": "meal-options",
+          "value": "beef"
+        }
+      }
+    ]
+  },
+  {
+    "id": "money",
+    "header": "Do we have money?",
+    "options": [
+      {
+        "text": "No",
+        "icon": "currency-usd-off",
+        "action": {
+          "type": "broke",
+          "value": ""
+        }
+      },
+      {
+        "text": "Yes",
+        "icon": "currency-usd",
+        "action": {
+          "type": "decision",
+          "value": "pick"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pick",
+    "header": "Feel like a certain type of food?",
+    "options": [
+      {
+        "text": "No",
+        "icon": "help",
+        "action": {
+          "type": "restaurant-options",
+          "value": "random"
+        }
+      },
+      {
+        "text": "Yes",
+        "icon": "hand",
+        "action": {
+          "type": "decision",
+          "value": "type"
+        }
+      }
+    ]
+  },
+  {
+    "id": "type",
+    "header": "What type of food?",
+    "options": [
+      {
+        "text": "Pizza",
+        "icon": "pizza",
+        "action": {
+          "type": "restaurant-options",
+          "value": "pizza"
+        }
+      },
+      {
+        "text": "Burgers",
+        "icon": "food",
+        "action": {
+          "type": "restaurant-options",
+          "value": "burger"
+        }
+      },
+      {
+        "text": "Pasta",
+        "icon": "pasta",
+        "action": {
+          "type": "restaurant-options",
+          "value": "pasta"
+        }
+      },
+      {
+        "text": "Chicken",
+        "icon": "food-drumstick-outline",
+        "action": {
+          "type": "restaurant-options",
+          "value": "chicken"
+        }
+      },
+      {
+        "text": "Other",
+        "icon": "head-question-outline",
+        "action": {
+          "type": "restaurant-options",
+          "value": "other"
+        }
+      }
+    ]
+  }
+]
