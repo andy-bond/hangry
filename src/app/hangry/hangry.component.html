@@ -9,13 +9,25 @@
     <mat-icon svgIcon="chevron-down"></mat-icon>
   </div>
   <ng-container *ngIf="meals$ | async as ms">
-    <mat-card *ngIf="meals" [@fade]>
-      <div *ngFor="let m of ms">{{m.name}}</div>
+    <mat-card *ngIf="meals" fxLayout="column" fxLayoutGap="8px" [@fade]>
+      <div *ngFor="let m of ms" class="meal" [class.highlighted]="highlightedMeal === m">
+        {{m.name}}
+      </div>
+      <div class="divider"></div>
+      <button mat-raised-button color="accent" (click)="random('meal')">
+        PICK FOR ME
+      </button>
     </mat-card>
   </ng-container>
   <ng-container *ngIf="restaurants$ | async as rs">
-    <mat-card *ngIf="restaurants" [@fade]>
-      <div *ngFor="let r of rs">{{r.name}}</div>
+    <mat-card *ngIf="restaurants" fxLayout="column" fxLayoutGap="8px" [@fade]>
+      <div *ngFor="let r of rs" class="restaurant" [class.highlighted]="highlightedRestaurant === r">
+        {{r.name}}
+      </div>
+      <div class="divider"></div>
+      <button mat-raised-button color="accent" (click)="random('restaurant')">
+        PICK FOR ME
+      </button>
     </mat-card>
   </ng-container>
 </div>

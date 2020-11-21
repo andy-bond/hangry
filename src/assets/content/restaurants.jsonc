@@ -14,7 +14,7 @@
   {
     "name": "Cheesecake Factory",
     "categories": [
-      "burgers",
+      "burger",
       "chicken",
       "pasta"
     ]
@@ -22,13 +22,13 @@
   {
     "name": "Burger-Fi",
     "categories": [
-      "burgers"
+      "burger"
     ]
   },
   {
     "name": "Mr. Brews",
     "categories": [
-      "burgers"
+      "burger"
     ]
   },
   {

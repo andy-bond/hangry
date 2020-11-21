@@ -1,3 +1,4 @@
+@use "sass:color";
 /* Angular Material */
 @import '~@angular/material/theming';
 @include mat-core();
@@ -30,9 +31,11 @@ $dark-background: map-get($dark-theme, background);
   --color-primary: #{mat-color($primary, default)};
   --color-primary-dark: #{mat-color($primary, darker)};
   --color-primary-light: #{mat-color($primary, lighter)};
+  --color-primary-transparent: #{color.change(mat-color($primary, default), $alpha: 0.2)};
   --color-accent: #{mat-color($accent, default)};
   --color-accent-dark: #{mat-color($accent, 700)};
   --color-accent-light: #{mat-color($accent, 500)};
+  --color-accent-transparent: #{color.change(mat-color($accent, default), $alpha: 0.2)};
   --color-warning: #{mat-color($warn, 700)};
   --color-success: #{mat-color($success, 700)};
   --color-scrollbar-thumb: #{var(--color-accent)};

@@ -11,3 +11,21 @@ h1 {
 .chevron {
   margin: 32px 0px;
 }
+
+.meal,
+.restaurant {
+  font-size: 1.2em;
+  padding: 8px;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary-transparent);
+  border-radius: 4px;
+
+  &.highlighted {
+    border: 1px solid var(--color-accent);
+    background-color: var(--color-accent-transparent);
+  }
+}
+
+.divider {
+  border-top: 1px solid var(--color-divider);
+}
